@@ -22,7 +22,7 @@ export function Hero() {
             Divčibare · U izgradnji · Predprodaja
           </p>
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-krema font-bold leading-tight mb-4 sm:mb-6">
-            Vaš odmor na <span className="text-zlato italic">Divčibarama</span>
+            Prodaja apartmana na <span className="text-zlato italic">Divčibarama</span>
           </h1>
           <p className="text-krema/80 text-sm sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-10">
             Dva stambena objekta apartmanskog tipa u srcu planine. 32 funkcionalne jedinice
