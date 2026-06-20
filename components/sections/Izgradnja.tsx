@@ -56,13 +56,13 @@ export function Izgradnja() {
             Radovi su u toku
           </h2>
           <p className="text-krema/60 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-            Pratite napredak gradnje kroz fotografije sa terena. Objekat raste
-            korak po korak, uz punu transparentnost prema budućim vlasnicima.
+            Pratite napredak gradnje kroz fotografije sa terena. Objekat raste korak po korak, uz
+            punu transparentnost prema budućim vlasnicima.
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="mb-14">
+        {/* <div className="mb-14">
           <div className="flex flex-col sm:flex-row gap-0 justify-between relative">
             <div className="hidden sm:block absolute top-4 left-[5%] right-[5%] h-0.5 bg-zelena-svetla" />
             {faze.map((f, i) => (
@@ -112,7 +112,7 @@ export function Izgradnja() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Galerija */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3">
@@ -161,9 +161,7 @@ export function Izgradnja() {
         onPrethodna={() =>
           setAktivan((a) => (a !== null ? (a - 1 + slike.length) % slike.length : 0))
         }
-        onSledeca={() =>
-          setAktivan((a) => (a !== null ? (a + 1) % slike.length : 0))
-        }
+        onSledeca={() => setAktivan((a) => (a !== null ? (a + 1) % slike.length : 0))}
       />
     </section>
   );

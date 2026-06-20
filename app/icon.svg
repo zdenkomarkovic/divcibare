@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="95" fill="#fdfbf6" stroke="#2f3b2e" stroke-width="2"/>
+<circle cx="100" cy="100" r="84" fill="none" stroke="#6b7a5e" stroke-width="1.5"/>
+<polygon points="30,140 65,85 90,115 120,65 170,140" fill="#3f5237"/>
+<polygon points="65,85 80,108 90,115 75,140 50,140" fill="#2f3b2e"/>
+<polygon points="120,65 140,100 150,140 95,140 105,110" fill="#54684a"/>
+<circle cx="135" cy="55" r="13" fill="#e8b94b"/>
+<rect x="20" y="140" width="160" height="60" fill="#fdfbf6"/>
+<text x="100" y="172" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="1" fill="#2f3b2e">Divčibare</text>
+</svg>

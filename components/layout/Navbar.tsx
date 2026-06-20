@@ -57,7 +57,13 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="#pocetna" className="flex items-center gap-3">
-          <span className="text-zlato font-serif text-2xl leading-none">⌂</span>
+          <img
+            src="/divcibare-logo.svg"
+            alt="Divčibare logo"
+            width={51}
+            height={51}
+            className="rounded-full"
+          />
           <div>
             <span className="text-krema font-serif text-lg font-bold leading-tight block">
               {PROJEKAT.naziv}

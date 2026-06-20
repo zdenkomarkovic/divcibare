@@ -9,7 +9,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-zlato font-serif text-2xl">⌂</span>
+              <img
+                src="/divcibare-logo.svg"
+                alt="Divčibare logo"
+                width={88}
+                height={88}
+                className="rounded-full"
+              />
               <div>
                 <span className="text-krema font-serif text-lg font-bold block">
                   {PROJEKAT.naziv}
