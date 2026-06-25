@@ -10,7 +10,7 @@ export const PROJEKAT = {
   adresa: "ul. Beli narcis br. 80, Divčibare",
   adresaKratko: "Beogradsko naselje, Divčibare",
   parcela: "813/1, KO Divčibare",
-  povrsina_parcele: "571 m²",
+  povrsina_parcele: "3.000 m²",
   dozvola: "ROP-VAL-29125-CPIH-4/2023",
   dozvola_datum: "15.06.2023.",
   org_vlasti: "Gradska uprava Valjevo",

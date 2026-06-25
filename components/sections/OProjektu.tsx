@@ -9,6 +9,7 @@ const stats = [
   { broj: "2", opis: "Stambena objekta" },
   { broj: "32", opis: "Apartmana ukupno" },
   { broj: "32", opis: "Parking mesta" },
+  { broj: "3.000", opis: "m² površina parcele" },
   { broj: "B", opis: "Kategorija objekta" },
 ];
 
@@ -38,7 +39,7 @@ export function OProjektu() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-16">
           {stats.map((s) => (
             <div key={s.opis} className="bg-zelena text-center py-8 px-4">
               <div className="font-serif text-4xl sm:text-5xl font-bold text-zlato mb-2">
