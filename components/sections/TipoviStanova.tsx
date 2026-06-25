@@ -13,6 +13,7 @@ interface TipStana {
   spratovi: string;
   brJedinica: string;
   slika: string;
+  slika3D?: string;
 }
 
 const tipovi: TipStana[] = [
@@ -33,6 +34,7 @@ const tipovi: TipStana[] = [
     spratovi: "Prizemlje, 1. i 2. sprat",
     brJedinica: "2 po spratu / 6 ukupno po objektu",
     slika: "/40.PNG",
+    slika3D: "/3D1.png",
   },
   {
     tip: "B",
@@ -42,6 +44,7 @@ const tipovi: TipStana[] = [
     spratovi: "Prizemlje, 1. i 2. sprat",
     brJedinica: "1 po spratu / 3 ukupno po objektu",
     slika: "/41.PNG",
+    slika3D: "/3D41.png",
   },
   {
     tip: "D",
@@ -66,7 +69,11 @@ const struktura = [
 const svePlanSlike = [
   ...tipovi.map((t) => ({ src: t.slika, alt: `Osnova — ${t.naziv}` })),
   { src: "/IMG-da82ce443282a4cce5c6186a3b4ffdac-V.jpg", alt: "Parking — 32 mesta, parcela 813/1 KO Divčibare" },
+  { src: "/3D1.png", alt: "3D vizualizacija — Apartman 40 m²" },
+  { src: "/3D41.png", alt: "3D vizualizacija — Apartman 41 m²" },
 ];
+const IDX_3D1 = svePlanSlike.length - 2;
+const IDX_3D41 = svePlanSlike.length - 1;
 
 export function TipoviStanova() {
   const [aktivan, setAktivan] = useState(0);
@@ -150,6 +157,41 @@ export function TipoviStanova() {
               <p className="text-zelena/40 text-sm font-medium tracking-wide">
                 Slika u pripremi
               </p>
+            </div>
+          ) : tip.slika3D ? (
+            <div className="flex flex-col gap-3">
+              <button
+                onClick={() => setLightboxSlika(aktivan === 1 ? IDX_3D1 : IDX_3D41)}
+                className="relative aspect-[4/3] overflow-hidden bg-zelena/5 group cursor-zoom-in w-full"
+                aria-label={`Uvećaj 3D vizualizaciju — ${tip.naziv}`}
+              >
+                <Image
+                  src={tip.slika3D}
+                  alt={`3D vizualizacija — ${tip.naziv}`}
+                  fill
+                  className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-zelena-tamna/0 group-hover:bg-zelena-tamna/20 transition-colors duration-300 flex items-end justify-end p-3">
+                  <span className="text-white/0 group-hover:text-white/80 transition-colors bg-zelena/80 px-2 py-1 text-xs flex items-center gap-1">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
+                    Uvećaj
+                  </span>
+                </div>
+              </button>
+              <button
+                onClick={() => setLightboxSlika(aktivan)}
+                className="relative w-20 h-20 overflow-hidden bg-zelena/5 group cursor-zoom-in border border-zelena/20 hover:border-zelena/60 transition-colors"
+                aria-label={`Osnova — ${tip.naziv}`}
+              >
+                <Image
+                  src={tip.slika}
+                  alt={`Osnova — ${tip.naziv}`}
+                  fill
+                  className="object-contain p-1 transition-transform duration-300 group-hover:scale-110"
+                />
+              </button>
             </div>
           ) : (
             <button
