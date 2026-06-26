@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://apartmanidivcibare.rs";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

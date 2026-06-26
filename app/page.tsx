@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { PROJEKAT, STANOVI } from "@/lib/constants";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://apartmanidivcibare.rs";
 
 const jsonLd = {
   "@context": "https://schema.org",
